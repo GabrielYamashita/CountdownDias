@@ -6,29 +6,43 @@
 }
 
 body {
-  color: #cccccc; /*cor número*/
-  font: normal 14px 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  color: #cccccc; /* cor número */
   font-weight: 706;
-  background: rgb(236,35,53);
+
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../img/econo23paisagem.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul.countdown {
   list-style: none;
-  margin: 120px 0;
+  margin: 70px 0;
   padding: 0;
   display: block;
   text-align: center;
 }
 
-ul.countdown li { display: inline-block; }
+ul.countdown li { 
+  display: inline-block; 
+}
 
 ul.countdown li span {
-  font-size: 350px;
+  font-size: 125px;
   font-weight: 712;
   line-height: 80px;
-  padding: 0px 10px;
-  /* border-top: 1px solid rgb(211, 29, 42);
-  border-bottom: 1px solid rgb(211, 29, 42); */
+  padding: 0px 55px;
+  border-top: 3px solid rgb(90,3,11);
+  border-bottom: 3px solid  rgb(90,3,11);
   margin-left: -4px;
 }
 
@@ -36,31 +50,23 @@ ul.countdown li p {
   color: #ffffff; /*cor dia/horas/minutos/segundos*/
   font-size: 55px;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
-/* .days {
-  background-color: rgb(211, 29, 42);
+.days {
+  background-color: rgb(90,3,11);
   padding: 0 10px;
   color: rgb(fff);
-} */
-.last { border-right: 1px solid rgb(211, 29, 42); }
-
-.img-fundo {
-  width: 100%;
-  margin-bottom: -36rem;
-  opacity: 100%;
 }
+.last { border-right: 3px solid rgb(90,3,11); }
 
 .titulo {
   color: #fff;
   font-size: 70px;
   font-weight: 706;
-  margin-top: -70px;
 }
 
 #video {
-  /* background-color: rgb(236,35,53); */
   position: fixed;
   right: 0;
   bottom: 0;
@@ -68,6 +74,116 @@ ul.countdown li p {
   min-height: 100%;
 }
 
-.body {
-  background-color: rgb(236,35,53);
+@media (max-width: 910px) {
+  ul.countdown {
+    margin: 55px 0px;
+  }
+
+  ul.countdown li span {
+    font-size: 90px;
+  }
+
+  ul.countdown li p {
+    font-size: 45px;
+    margin-top: 20px;
+  }
+
+  .titulo {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 855px) {
+  ul.countdown {
+    margin: 35px 0px;
+  }
+
+  ul.countdown li span {
+    font-size: 60px;
+  }
+
+  ul.countdown li p {
+    font-size: 30px;
+    margin-top: 5px;
+  }
+
+  .titulo {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 670px) {
+  .container {
+    background-image: url('../img/econo23retrato.jpeg');
+  }
+
+  ul.countdown {
+    margin: 20px 0px;
+  }
+
+  ul.countdown li span {
+    font-size: 45px;
+    padding: 0px 40px;
+  }
+
+  ul.countdown li p {
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  .titulo {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 470px) {
+  .container {
+    background-image: url('../img/econo23retrato.jpeg');
+  }
+
+  ul.countdown {
+    margin: 15px 0px;
+    border: 3px solid rgb(90,3,11);
+  }
+
+  ul.countdown li { display: block }
+
+  ul.countdown li span {
+    line-height: normal;
+    font-size: 60px;
+    border-top: 0px solid rgb(90,3,11);
+    border-bottom: 0px solid  rgb(90,3,11);
+    border-left: 0px solid rgb(90,3,11);
+    border-right: 0px solid  rgb(90,3,11);
+  }
+
+  li:nth-child(1) span{
+    background-color: rgb(90,3,11);
+  }
+
+  ul.countdown li p {
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+}
+
+
+.bodyVideo {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover; /* Ensure the video covers the entire background */
 }
